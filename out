@@ -1,0 +1,5 @@
+{'harbor_seal': '/scratch/gpfs/bjarnold/Graham/ncbi_data/harbor_seal/data/GCF_004348235.1/protein.faa', 'ca_sea_lion': '/scratch/gpfs/bjarnold/Graham/ncbi_data/ca_sea_lion/data/GCF_009762305.2/protein.faa', 'northern_elephant_seal': '/scratch/gpfs/bjarnold/Graham/ncbi_data/northern_elephant_seal/data/GCF_029215605.1/protein.faa'}
+Created blast db for harbor_seal
+Created blast db for ca_sea_lion
+Created blast db for northern_elephant_seal
+Created blast db for reference species
