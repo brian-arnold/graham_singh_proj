@@ -1,0 +1,153 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 30
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+all                       1
+cellranger_count          6
+create_sample_file        6
+total                    13
+
+Select jobs to execute...
+Execute 6 jobs...
+
+[Mon Sep  2 09:56:03 2024]
+localrule create_sample_file:
+    output: CSL-15900_NULL_OTH.txt
+    jobid: 8
+    reason: Missing output files: CSL-15900_NULL_OTH.txt
+    wildcards: sample=CSL-15900_NULL_OTH
+    resources: tmpdir=/tmp
+
+
+[Mon Sep  2 09:56:03 2024]
+localrule create_sample_file:
+    output: CSL-15900_ZYM_OTH.txt
+    jobid: 10
+    reason: Missing output files: CSL-15900_ZYM_OTH.txt
+    wildcards: sample=CSL-15900_ZYM_OTH
+    resources: tmpdir=/tmp
+
+
+[Mon Sep  2 09:56:03 2024]
+localrule create_sample_file:
+    output: ES-5161_NULL_OTH.txt
+    jobid: 2
+    reason: Missing output files: ES-5161_NULL_OTH.txt
+    wildcards: sample=ES-5161_NULL_OTH
+    resources: tmpdir=/tmp
+
+
+[Mon Sep  2 09:56:03 2024]
+localrule create_sample_file:
+    output: HS-3088_NULL_OTH.txt
+    jobid: 12
+    reason: Missing output files: HS-3088_NULL_OTH.txt
+    wildcards: sample=HS-3088_NULL_OTH
+    resources: tmpdir=/tmp
+
+
+[Mon Sep  2 09:56:03 2024]
+localrule create_sample_file:
+    output: HS-3088_ZYM_OTH.txt
+    jobid: 4
+    reason: Missing output files: HS-3088_ZYM_OTH.txt
+    wildcards: sample=HS-3088_ZYM_OTH
+    resources: tmpdir=/tmp
+
+
+[Mon Sep  2 09:56:03 2024]
+localrule create_sample_file:
+    output: ES-5161_ZYM_OTH.txt
+    jobid: 6
+    reason: Missing output files: ES-5161_ZYM_OTH.txt
+    wildcards: sample=ES-5161_ZYM_OTH
+    resources: tmpdir=/tmp
+
+[Mon Sep  2 09:56:03 2024]
+Finished job 8.
+1 of 13 steps (8%) done
+[Mon Sep  2 09:56:03 2024]
+Finished job 10.
+2 of 13 steps (15%) done
+[Mon Sep  2 09:56:03 2024]
+Finished job 2.
+3 of 13 steps (23%) done
+[Mon Sep  2 09:56:03 2024]
+Finished job 12.
+4 of 13 steps (31%) done
+Select jobs to execute...
+Execute 2 jobs...
+
+[Mon Sep  2 09:56:03 2024]
+localrule cellranger_count:
+    input: ES-5161_NULL_OTH.txt
+    output: ES-5161_NULL_OTH/ES-5161_NULL_OTH.mri.tgz
+    jobid: 1
+    reason: Missing output files: ES-5161_NULL_OTH/ES-5161_NULL_OTH.mri.tgz; Input files updated by another job: ES-5161_NULL_OTH.txt
+    wildcards: sample=ES-5161_NULL_OTH
+    threads: 10
+    resources: tmpdir=/tmp, mem_mb=10000, mem_mib=9537
+
+
+[Mon Sep  2 09:56:03 2024]
+localrule cellranger_count:
+    input: HS-3088_NULL_OTH.txt
+    output: HS-3088_NULL_OTH/HS-3088_NULL_OTH.mri.tgz
+    jobid: 11
+    reason: Missing output files: HS-3088_NULL_OTH/HS-3088_NULL_OTH.mri.tgz; Input files updated by another job: HS-3088_NULL_OTH.txt
+    wildcards: sample=HS-3088_NULL_OTH
+    threads: 10
+    resources: tmpdir=/tmp, mem_mb=10000, mem_mib=9537
+
+[Mon Sep  2 09:56:03 2024]
+Finished job 4.
+5 of 13 steps (38%) done
+[Mon Sep  2 09:56:03 2024]
+Finished job 6.
+6 of 13 steps (46%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep  2 09:56:03 2024]
+localrule cellranger_count:
+    input: ES-5161_ZYM_OTH.txt
+    output: ES-5161_ZYM_OTH/ES-5161_ZYM_OTH.mri.tgz
+    jobid: 5
+    reason: Missing output files: ES-5161_ZYM_OTH/ES-5161_ZYM_OTH.mri.tgz; Input files updated by another job: ES-5161_ZYM_OTH.txt
+    wildcards: sample=ES-5161_ZYM_OTH
+    threads: 10
+    resources: tmpdir=/tmp, mem_mb=10000, mem_mib=9537
+
+Select jobs to execute...
+Waiting for more resources.
+Waiting for more resources.
+Waiting for more resources.
+Waiting for more resources.
+[Mon Sep  2 11:29:42 2024]
+Error in rule cellranger_count:
+    jobid: 11
+    input: HS-3088_NULL_OTH.txt
+    output: HS-3088_NULL_OTH/HS-3088_NULL_OTH.mri.tgz
+    shell:
+        
+        /scratch/gpfs/bjarnold/Graham/cellranger/cellranger-8.0.1/cellranger count         --id HS-3088_NULL_OTH         --transcriptome /scratch/gpfs/bjarnold/Graham/genomes_10X/harbor_seal         --create-bam true         --fastqs /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p         --sample HS-3088_NULL_OTH         --localcores 10         
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job cellranger_count since they might be corrupted:
+HS-3088_NULL_OTH/HS-3088_NULL_OTH.mri.tgz
+[Mon Sep  2 23:28:39 2024]
+Finished job 5.
+7 of 13 steps (54%) done
+Removing temporary output ES-5161_ZYM_OTH.txt.
+[Tue Sep  3 00:06:19 2024]
+Finished job 1.
+8 of 13 steps (62%) done
+Removing temporary output ES-5161_NULL_OTH.txt.
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-09-02T095603.105650.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

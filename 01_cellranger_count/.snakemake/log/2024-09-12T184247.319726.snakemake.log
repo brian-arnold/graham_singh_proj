@@ -1,0 +1,74 @@
+Building DAG of jobs...
+SLURM run ID: 7588f5ec-30c7-4a37-8f23-71c997ed0b9e
+Using shell: /usr/bin/bash
+Provided remote nodes: 10
+Job stats:
+job                 count
+----------------  -------
+all                     1
+cellranger_count        2
+total                   3
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Thu Sep 12 18:42:47 2024]
+rule cellranger_count:
+    input: CSL-15900_NULL_OTH.txt
+    output: CSL-15900_NULL_OTH/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+    log: logs/cellranger_count/CSL-15900_NULL_OTH.log
+    jobid: 5
+    reason: Missing output files: CSL-15900_NULL_OTH/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+    wildcards: sample=CSL-15900_NULL_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=1440, time=1440
+
+No SLURM account given, trying to guess.
+Guessed SLURM account: cs
+Job 5 has been submitted with SLURM jobid 58904143 (log: /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/CSL-15900_NULL_OTH/58904143.log).
+
+[Thu Sep 12 18:42:47 2024]
+rule cellranger_count:
+    input: CSL-15900_ZYM_OTH.txt
+    output: CSL-15900_ZYM_OTH/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+    log: logs/cellranger_count/CSL-15900_ZYM_OTH.log
+    jobid: 7
+    reason: Missing output files: CSL-15900_ZYM_OTH/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+    wildcards: sample=CSL-15900_ZYM_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=1440, time=1440
+
+Job 7 has been submitted with SLURM jobid 58904144 (log: /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/CSL-15900_ZYM_OTH/58904144.log).
+[Thu Sep 12 18:43:47 2024]
+Error in rule cellranger_count:
+    message: SLURM-job '58904143' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 5
+    input: CSL-15900_NULL_OTH.txt
+    output: CSL-15900_NULL_OTH/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+    log: logs/cellranger_count/CSL-15900_NULL_OTH.log, /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/CSL-15900_NULL_OTH/58904143.log (check log file(s) for error details)
+    shell:
+        
+        /scratch/gpfs/bjarnold/Graham/cellranger/cellranger-8.0.1/cellranger count         --id CSL-15900_NULL_OTH         --transcriptome /scratch/gpfs/bjarnold/Graham/genomes_10X/ca_sea_lion         --create-bam true         --fastqs /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p         --sample CSL-15900_NULL_OTH         --force-cells 10000         --include-introns true        --localcores 20         > logs/cellranger_count/CSL-15900_NULL_OTH.log 2> logs/cellranger_count/CSL-15900_NULL_OTH.log
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    external_jobid: 58904143
+
+[Thu Sep 12 18:43:47 2024]
+Error in rule cellranger_count:
+    message: SLURM-job '58904144' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 7
+    input: CSL-15900_ZYM_OTH.txt
+    output: CSL-15900_ZYM_OTH/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+    log: logs/cellranger_count/CSL-15900_ZYM_OTH.log, /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/CSL-15900_ZYM_OTH/58904144.log (check log file(s) for error details)
+    shell:
+        
+        /scratch/gpfs/bjarnold/Graham/cellranger/cellranger-8.0.1/cellranger count         --id CSL-15900_ZYM_OTH         --transcriptome /scratch/gpfs/bjarnold/Graham/genomes_10X/ca_sea_lion         --create-bam true         --fastqs /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p         --sample CSL-15900_ZYM_OTH         --force-cells 10000         --include-introns true        --localcores 20         > logs/cellranger_count/CSL-15900_ZYM_OTH.log 2> logs/cellranger_count/CSL-15900_ZYM_OTH.log
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    external_jobid: 58904144
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-09-12T184247.319726.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

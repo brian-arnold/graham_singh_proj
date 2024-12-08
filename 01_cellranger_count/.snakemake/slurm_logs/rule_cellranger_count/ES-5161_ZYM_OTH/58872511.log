@@ -1,0 +1,76 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Provided resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, time=1440
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 12:14:02 2024]
+rule cellranger_count:
+    input: ES-5161_ZYM_OTH.txt
+    output: ES-5161_ZYM_OTH/ES-5161_ZYM_OTH.mri.tgz
+    log: logs/cellranger_count/ES-5161_ZYM_OTH.log
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=ES-5161_ZYM_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=1440, time=1440
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, time=1440
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 12:14:03 2024]
+localrule cellranger_count:
+    input: ES-5161_ZYM_OTH.txt
+    output: ES-5161_ZYM_OTH/ES-5161_ZYM_OTH.mri.tgz
+    log: logs/cellranger_count/ES-5161_ZYM_OTH.log
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=ES-5161_ZYM_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=/tmp, runtime=1440, time=1440
+
+Martian Runtime - v4.0.12
+2024-09-11 12:14:05 [runtime] Reattaching in local mode.
+Serving UI at http://della-r4c2n14:35009?auth=jZTRRn1a8sRwLl97tnlLYzzat4dZon1OdNiGyiY_rLo
+
+
+Outputs:
+- Run summary HTML:                         /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/ES-5161_ZYM_OTH/outs/web_summary.html
+- Run summary CSV:                          /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/ES-5161_ZYM_OTH/outs/metrics_summary.csv
+- BAM:                                      /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/ES-5161_ZYM_OTH/outs/possorted_genome_bam.bam
+- BAM BAI index:                            /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/ES-5161_ZYM_OTH/outs/possorted_genome_bam.bam.bai
+- BAM CSI index:                            null
+- Filtered feature-barcode matrices MEX:    /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/ES-5161_ZYM_OTH/outs/filtered_feature_bc_matrix
+- Filtered feature-barcode matrices HDF5:   /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/ES-5161_ZYM_OTH/outs/filtered_feature_bc_matrix.h5
+- Unfiltered feature-barcode matrices MEX:  /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/ES-5161_ZYM_OTH/outs/raw_feature_bc_matrix
+- Unfiltered feature-barcode matrices HDF5: /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/ES-5161_ZYM_OTH/outs/raw_feature_bc_matrix.h5
+- Secondary analysis output CSV:            /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/ES-5161_ZYM_OTH/outs/analysis
+- Per-molecule read information:            /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/ES-5161_ZYM_OTH/outs/molecule_info.h5
+- CRISPR-specific analysis:                 null
+- Antibody aggregate barcodes:              null
+- Loupe Browser file:                       /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/ES-5161_ZYM_OTH/outs/cloupe.cloupe
+- Feature Reference:                        null
+- Target Panel File:                        null
+- Probe Set File:                           null
+
+Waiting 6 seconds for UI to do final refresh.
+Pipestance completed successfully!
+
+2024-09-11 12:14:12 Shutting down.
+Saving pipestance info to "ES-5161_ZYM_OTH/ES-5161_ZYM_OTH.mri.tgz"
+[Wed Sep 11 12:14:19 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Storing output in storage.
+DATA_DIR /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p
+[Wed Sep 11 12:14:19 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Storing output in storage.
+DATA_DIR /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p

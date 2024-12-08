@@ -1,0 +1,17 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 40
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+all                       1
+cellranger_count          6
+create_sample_file        6
+total                    13
+
+Select jobs to execute...
+Terminating processes on user request, this might take some time.
+Complete log: .snakemake/log/2024-09-01T182916.388605.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

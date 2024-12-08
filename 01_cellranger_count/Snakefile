@@ -1,0 +1,47 @@
+import os
+import glob
+import functions as fn
+
+sample_sheet = 'sample_sheet_ES.txt'
+
+samples_2_genome, data_dir = fn.parse_sample_sheet(sample_sheet)
+print('DATA_DIR', data_dir)
+print(list(samples_2_genome.keys()))    
+
+BASE_DIR = '/scratch/gpfs/bjarnold/Graham'
+CR_DIR = f'{BASE_DIR}/cellranger/cellranger-8.0.1'
+
+def get_genome(wildcards):
+    return samples_2_genome[wildcards.sample]
+
+# Rule all for specifying the final outputs of the workflow
+rule all:
+    input:
+        expand('{sample}_done.txt', sample=list(samples_2_genome.keys()))
+
+rule cellranger_count:
+    output:
+        "{sample}_done.txt"
+    params:
+        cr_command = f"{CR_DIR}/cellranger count",
+        sample = "{sample}",
+        genome = get_genome,
+        fastq_dir = data_dir,
+    resources:
+        mem_mb=40000
+    threads: 20
+    log:
+        'logs/cellranger_count/{sample}.log'
+    shell:
+        """
+        {params.cr_command} \
+        --id {params.sample} \
+        --transcriptome {params.genome} \
+        --create-bam false \
+        --fastqs {params.fastq_dir} \
+        --sample {params.sample} \
+        --localcores {threads} \
+        > {log} 2> {log}
+        touch {output}
+        """
+#--include-introns true\

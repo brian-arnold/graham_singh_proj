@@ -1,0 +1,176 @@
+Building DAG of jobs...
+SLURM run ID: 3705c069-6c50-4c45-9674-88c894754810
+Using shell: /usr/bin/bash
+Provided remote nodes: 10
+Job stats:
+job                 count
+----------------  -------
+all                     1
+cellranger_count        6
+total                   7
+
+Select jobs to execute...
+Execute 6 jobs...
+
+[Wed Oct  2 14:24:53 2024]
+rule cellranger_count:
+    output: ES-5161_NULL_OTH_done.txt
+    log: logs/cellranger_count/ES-5161_NULL_OTH.log
+    jobid: 1
+    reason: Missing output files: ES-5161_NULL_OTH_done.txt
+    wildcards: sample=ES-5161_NULL_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=3000, time=3000
+
+No SLURM account given, trying to guess.
+Unable to guess SLURM account. Trying to proceed without.
+Job 1 has been submitted with SLURM jobid 59419468 (log: /scratch/gpfs/bjarnold/Graham/scripts/01_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/ES-5161_NULL_OTH/59419468.log).
+
+[Wed Oct  2 14:24:53 2024]
+rule cellranger_count:
+    output: ES-5161_ZYM_OTH_done.txt
+    log: logs/cellranger_count/ES-5161_ZYM_OTH.log
+    jobid: 3
+    reason: Missing output files: ES-5161_ZYM_OTH_done.txt
+    wildcards: sample=ES-5161_ZYM_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=3000, time=3000
+
+Job 3 has been submitted with SLURM jobid 59419469 (log: /scratch/gpfs/bjarnold/Graham/scripts/01_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/ES-5161_ZYM_OTH/59419469.log).
+
+[Wed Oct  2 14:24:53 2024]
+rule cellranger_count:
+    output: HS-3088_ZYM_OTH_done.txt
+    log: logs/cellranger_count/HS-3088_ZYM_OTH.log
+    jobid: 2
+    reason: Missing output files: HS-3088_ZYM_OTH_done.txt
+    wildcards: sample=HS-3088_ZYM_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=3000, time=3000
+
+Job 2 has been submitted with SLURM jobid 59419470 (log: /scratch/gpfs/bjarnold/Graham/scripts/01_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/HS-3088_ZYM_OTH/59419470.log).
+
+[Wed Oct  2 14:24:53 2024]
+rule cellranger_count:
+    output: HS-3088_NULL_OTH_done.txt
+    log: logs/cellranger_count/HS-3088_NULL_OTH.log
+    jobid: 6
+    reason: Missing output files: HS-3088_NULL_OTH_done.txt
+    wildcards: sample=HS-3088_NULL_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=3000, time=3000
+
+Job 6 has been submitted with SLURM jobid 59419471 (log: /scratch/gpfs/bjarnold/Graham/scripts/01_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/HS-3088_NULL_OTH/59419471.log).
+
+[Wed Oct  2 14:24:53 2024]
+rule cellranger_count:
+    output: CSL-15900_ZYM_OTH_done.txt
+    log: logs/cellranger_count/CSL-15900_ZYM_OTH.log
+    jobid: 5
+    reason: Missing output files: CSL-15900_ZYM_OTH_done.txt; Code has changed since last execution; Params have changed since last execution
+    wildcards: sample=CSL-15900_ZYM_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=3000, time=3000
+
+Job 5 has been submitted with SLURM jobid 59419472 (log: /scratch/gpfs/bjarnold/Graham/scripts/01_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/CSL-15900_ZYM_OTH/59419472.log).
+
+[Wed Oct  2 14:24:53 2024]
+rule cellranger_count:
+    output: CSL-15900_NULL_OTH_done.txt
+    log: logs/cellranger_count/CSL-15900_NULL_OTH.log
+    jobid: 4
+    reason: Missing output files: CSL-15900_NULL_OTH_done.txt; Code has changed since last execution; Params have changed since last execution
+    wildcards: sample=CSL-15900_NULL_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=3000, time=3000
+
+Job 4 has been submitted with SLURM jobid 59419473 (log: /scratch/gpfs/bjarnold/Graham/scripts/01_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/CSL-15900_NULL_OTH/59419473.log).
+[Wed Oct  2 14:25:50 2024]
+Error in rule cellranger_count:
+    message: SLURM-job '59419468' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 1
+    output: ES-5161_NULL_OTH_done.txt
+    log: logs/cellranger_count/ES-5161_NULL_OTH.log, /scratch/gpfs/bjarnold/Graham/scripts/01_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/ES-5161_NULL_OTH/59419468.log (check log file(s) for error details)
+    shell:
+        
+        /scratch/gpfs/bjarnold/Graham/cellranger/cellranger-8.0.1/cellranger count         --id ES-5161_NULL_OTH         --transcriptome /scratch/gpfs/bjarnold/Graham/genomes_10X/northern_elephant_seal         --create-bam true         --fastqs /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p         --sample ES-5161_NULL_OTH         --include-introns true        --create-bam false         --localcores 20         > logs/cellranger_count/ES-5161_NULL_OTH.log 2> logs/cellranger_count/ES-5161_NULL_OTH.log
+        touch ES-5161_NULL_OTH_done.txt
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    external_jobid: 59419468
+
+[Wed Oct  2 14:25:50 2024]
+Error in rule cellranger_count:
+    message: SLURM-job '59419469' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 3
+    output: ES-5161_ZYM_OTH_done.txt
+    log: logs/cellranger_count/ES-5161_ZYM_OTH.log, /scratch/gpfs/bjarnold/Graham/scripts/01_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/ES-5161_ZYM_OTH/59419469.log (check log file(s) for error details)
+    shell:
+        
+        /scratch/gpfs/bjarnold/Graham/cellranger/cellranger-8.0.1/cellranger count         --id ES-5161_ZYM_OTH         --transcriptome /scratch/gpfs/bjarnold/Graham/genomes_10X/northern_elephant_seal         --create-bam true         --fastqs /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p         --sample ES-5161_ZYM_OTH         --include-introns true        --create-bam false         --localcores 20         > logs/cellranger_count/ES-5161_ZYM_OTH.log 2> logs/cellranger_count/ES-5161_ZYM_OTH.log
+        touch ES-5161_ZYM_OTH_done.txt
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    external_jobid: 59419469
+
+[Wed Oct  2 14:25:50 2024]
+Error in rule cellranger_count:
+    message: SLURM-job '59419470' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 2
+    output: HS-3088_ZYM_OTH_done.txt
+    log: logs/cellranger_count/HS-3088_ZYM_OTH.log, /scratch/gpfs/bjarnold/Graham/scripts/01_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/HS-3088_ZYM_OTH/59419470.log (check log file(s) for error details)
+    shell:
+        
+        /scratch/gpfs/bjarnold/Graham/cellranger/cellranger-8.0.1/cellranger count         --id HS-3088_ZYM_OTH         --transcriptome /scratch/gpfs/bjarnold/Graham/genomes_10X/harbor_seal         --create-bam true         --fastqs /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p         --sample HS-3088_ZYM_OTH         --include-introns true        --create-bam false         --localcores 20         > logs/cellranger_count/HS-3088_ZYM_OTH.log 2> logs/cellranger_count/HS-3088_ZYM_OTH.log
+        touch HS-3088_ZYM_OTH_done.txt
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    external_jobid: 59419470
+
+[Wed Oct  2 14:26:20 2024]
+Error in rule cellranger_count:
+    message: SLURM-job '59419471' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 6
+    output: HS-3088_NULL_OTH_done.txt
+    log: logs/cellranger_count/HS-3088_NULL_OTH.log, /scratch/gpfs/bjarnold/Graham/scripts/01_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/HS-3088_NULL_OTH/59419471.log (check log file(s) for error details)
+    shell:
+        
+        /scratch/gpfs/bjarnold/Graham/cellranger/cellranger-8.0.1/cellranger count         --id HS-3088_NULL_OTH         --transcriptome /scratch/gpfs/bjarnold/Graham/genomes_10X/harbor_seal         --create-bam true         --fastqs /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p         --sample HS-3088_NULL_OTH         --include-introns true        --create-bam false         --localcores 20         > logs/cellranger_count/HS-3088_NULL_OTH.log 2> logs/cellranger_count/HS-3088_NULL_OTH.log
+        touch HS-3088_NULL_OTH_done.txt
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    external_jobid: 59419471
+
+[Wed Oct  2 14:26:20 2024]
+Error in rule cellranger_count:
+    message: SLURM-job '59419472' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 5
+    output: CSL-15900_ZYM_OTH_done.txt
+    log: logs/cellranger_count/CSL-15900_ZYM_OTH.log, /scratch/gpfs/bjarnold/Graham/scripts/01_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/CSL-15900_ZYM_OTH/59419472.log (check log file(s) for error details)
+    shell:
+        
+        /scratch/gpfs/bjarnold/Graham/cellranger/cellranger-8.0.1/cellranger count         --id CSL-15900_ZYM_OTH         --transcriptome /scratch/gpfs/bjarnold/Graham/genomes_10X/ca_sea_lion         --create-bam true         --fastqs /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p         --sample CSL-15900_ZYM_OTH         --include-introns true        --create-bam false         --localcores 20         > logs/cellranger_count/CSL-15900_ZYM_OTH.log 2> logs/cellranger_count/CSL-15900_ZYM_OTH.log
+        touch CSL-15900_ZYM_OTH_done.txt
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    external_jobid: 59419472
+
+[Wed Oct  2 14:26:22 2024]
+Error in rule cellranger_count:
+    message: SLURM-job '59419473' failed, SLURM status is: 'FAILED'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 4
+    output: CSL-15900_NULL_OTH_done.txt
+    log: logs/cellranger_count/CSL-15900_NULL_OTH.log, /scratch/gpfs/bjarnold/Graham/scripts/01_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/CSL-15900_NULL_OTH/59419473.log (check log file(s) for error details)
+    shell:
+        
+        /scratch/gpfs/bjarnold/Graham/cellranger/cellranger-8.0.1/cellranger count         --id CSL-15900_NULL_OTH         --transcriptome /scratch/gpfs/bjarnold/Graham/genomes_10X/ca_sea_lion         --create-bam true         --fastqs /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p         --sample CSL-15900_NULL_OTH         --include-introns true        --create-bam false         --localcores 20         > logs/cellranger_count/CSL-15900_NULL_OTH.log 2> logs/cellranger_count/CSL-15900_NULL_OTH.log
+        touch CSL-15900_NULL_OTH_done.txt
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    external_jobid: 59419473
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-10-02T142450.584317.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

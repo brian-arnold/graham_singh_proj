@@ -1,0 +1,99 @@
+Building DAG of jobs...
+SLURM run ID: 33bfb41f-350d-4522-8245-55c4af29faee
+Using shell: /usr/bin/bash
+Provided remote nodes: 10
+Job stats:
+job                   count
+------------------  -------
+all                       1
+cellranger_count          6
+create_sample_file        6
+total                    13
+
+Select jobs to execute...
+Execute 6 jobs...
+
+[Mon Sep  2 09:40:32 2024]
+localrule create_sample_file:
+    output: ES-5161_NULL_OTH.txt
+    jobid: 2
+    reason: Missing output files: ES-5161_NULL_OTH.txt
+    wildcards: sample=ES-5161_NULL_OTH
+    resources: tmpdir=/tmp
+
+
+[Mon Sep  2 09:40:32 2024]
+localrule create_sample_file:
+    output: HS-3088_NULL_OTH.txt
+    jobid: 12
+    reason: Missing output files: HS-3088_NULL_OTH.txt
+    wildcards: sample=HS-3088_NULL_OTH
+    resources: tmpdir=/tmp
+
+
+[Mon Sep  2 09:40:32 2024]
+localrule create_sample_file:
+    output: HS-3088_ZYM_OTH.txt
+    jobid: 4
+    reason: Missing output files: HS-3088_ZYM_OTH.txt
+    wildcards: sample=HS-3088_ZYM_OTH
+    resources: tmpdir=/tmp
+
+
+[Mon Sep  2 09:40:32 2024]
+localrule create_sample_file:
+    output: ES-5161_ZYM_OTH.txt
+    jobid: 6
+    reason: Missing output files: ES-5161_ZYM_OTH.txt
+    wildcards: sample=ES-5161_ZYM_OTH
+    resources: tmpdir=/tmp
+
+
+[Mon Sep  2 09:40:32 2024]
+localrule create_sample_file:
+    output: CSL-15900_NULL_OTH.txt
+    jobid: 8
+    reason: Missing output files: CSL-15900_NULL_OTH.txt
+    wildcards: sample=CSL-15900_NULL_OTH
+    resources: tmpdir=/tmp
+
+
+[Mon Sep  2 09:40:32 2024]
+localrule create_sample_file:
+    output: CSL-15900_ZYM_OTH.txt
+    jobid: 10
+    reason: Missing output files: CSL-15900_ZYM_OTH.txt
+    wildcards: sample=CSL-15900_ZYM_OTH
+    resources: tmpdir=/tmp
+
+[Mon Sep  2 09:40:32 2024]
+Finished job 2.
+1 of 13 steps (8%) done
+[Mon Sep  2 09:40:32 2024]
+Finished job 12.
+2 of 13 steps (15%) done
+[Mon Sep  2 09:40:32 2024]
+Finished job 4.
+3 of 13 steps (23%) done
+[Mon Sep  2 09:40:32 2024]
+Finished job 6.
+4 of 13 steps (31%) done
+Select jobs to execute...
+Execute 4 jobs...
+
+[Mon Sep  2 09:40:32 2024]
+rule cellranger_count:
+    input: ES-5161_NULL_OTH.txt
+    output: ES-5161_NULL_OTH/ES-5161_NULL_OTH.mri.tgz
+    jobid: 1
+    reason: Missing output files: ES-5161_NULL_OTH/ES-5161_NULL_OTH.mri.tgz; Input files updated by another job: ES-5161_NULL_OTH.txt
+    wildcards: sample=ES-5161_NULL_OTH
+    threads: 10
+    resources: tmpdir=<TBD>, mem_mb=10000, mem_mib=9537, time=1200
+
+No SLURM account given, trying to guess.
+Guessed SLURM account: cs
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+WorkflowError:
+SLURM job submission failed. The error message was sbatch: error: Batch job submission failed: Requested time limit is invalid (missing or exceeds some limit)
+

@@ -1,1 +1,4 @@
-/blast_out/*
+/02_reciprocal_blast/blast_out/*
+/01_cellranger_count/output_original/*
+/01_cellranger_count/output_no_force_cells_include_introns/*
+/01_cellranger_count/output_no_force_cells_no_introns/*

@@ -1,0 +1,47 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Provided resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, time=3000
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Sep 14 18:19:01 2024]
+rule cellranger_count:
+    output: CSL-15900_ZYM_OTH_done.txt
+    log: logs/cellranger_count/CSL-15900_ZYM_OTH.log
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=CSL-15900_ZYM_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=3000, time=3000
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, time=3000
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Sep 14 18:19:02 2024]
+localrule cellranger_count:
+    output: CSL-15900_ZYM_OTH_done.txt
+    log: logs/cellranger_count/CSL-15900_ZYM_OTH.log
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=CSL-15900_ZYM_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=/tmp, runtime=3000, time=3000
+
+[Sun Sep 15 05:21:35 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Storing output in storage.
+DATA_DIR /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p
+['CSL-15900_NULL_OTH', 'CSL-15900_ZYM_OTH']
+[Sun Sep 15 05:21:35 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Storing output in storage.
+DATA_DIR /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p
+['CSL-15900_NULL_OTH', 'CSL-15900_ZYM_OTH']

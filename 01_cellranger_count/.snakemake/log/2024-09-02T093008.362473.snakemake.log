@@ -1,0 +1,23 @@
+Building DAG of jobs...
+SLURM run ID: 449adbd5-d64d-476b-888a-05266d693a84
+Using shell: /usr/bin/bash
+Provided remote nodes: 10
+Job stats:
+job                   count
+------------------  -------
+all                       1
+cellranger_count          6
+create_sample_file        6
+total                    13
+
+Select jobs to execute...
+InputFunctionException in rule create_sample_file in file /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/Snakefile, line 39:
+Error:
+  WorkflowError:
+    Failed to evaluate resources value '0-20:00:00'.
+        String arguments may need additional quoting. E.g.: --default-resources "tmpdir='/home/user/tmp'" or --set-resources "somerule:someresource='--nice=100'". This also holds for setting resources inside of a profile, where you might have to enclose them in single and double quotes, i.e. someresource: "'--nice=100'".
+    SyntaxError: invalid syntax (<string>, line 1)
+Wildcards:
+  sample=ES-5161_NULL_OTH
+Traceback:
+ (rule create_sample_file, line 48, /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/Snakefile)

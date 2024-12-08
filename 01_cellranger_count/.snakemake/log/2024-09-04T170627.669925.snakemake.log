@@ -1,0 +1,62 @@
+Building DAG of jobs...
+SLURM run ID: bf2bcae4-6f26-4610-a544-fe23e8e1e6ce
+Using shell: /usr/bin/bash
+Provided remote nodes: 10
+Job stats:
+job                   count
+------------------  -------
+all                       1
+cellranger_count          1
+create_sample_file        1
+total                     3
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep  4 17:06:29 2024]
+localrule create_sample_file:
+    output: ES-5161_NULL_OTH.txt
+    log: logs/create_sample_file/ES-5161_NULL_OTH.log
+    jobid: 2
+    reason: Missing output files: ES-5161_NULL_OTH.txt
+    wildcards: sample=ES-5161_NULL_OTH
+    resources: mem_mb=20000, mem_mib=19074, disk_mb=1000, disk_mib=954, tmpdir=/tmp, runtime=1200, time=1200
+
+[Wed Sep  4 17:06:29 2024]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep  4 17:06:29 2024]
+rule cellranger_count:
+    input: ES-5161_NULL_OTH.txt
+    output: ES-5161_NULL_OTH/ES-5161_NULL_OTH.mri.tgz
+    log: logs/cellranger_count/ES-5161_NULL_OTH.log
+    jobid: 1
+    reason: Missing output files: ES-5161_NULL_OTH/ES-5161_NULL_OTH.mri.tgz; Input files updated by another job: ES-5161_NULL_OTH.txt
+    wildcards: sample=ES-5161_NULL_OTH
+    threads: 10
+    resources: mem_mb=20000, mem_mib=19074, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=1200, time=1200
+
+No SLURM account given, trying to guess.
+Unable to guess SLURM account. Trying to proceed without.
+Job 1 has been submitted with SLURM jobid 58733986 (log: /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/ES-5161_NULL_OTH/58733986.log).
+[Thu Sep  5 13:12:23 2024]
+Error in rule cellranger_count:
+    message: SLURM-job '58733986' failed, SLURM status is: 'TIMEOUT'. For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 1
+    input: ES-5161_NULL_OTH.txt
+    output: ES-5161_NULL_OTH/ES-5161_NULL_OTH.mri.tgz
+    log: logs/cellranger_count/ES-5161_NULL_OTH.log, /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/ES-5161_NULL_OTH/58733986.log (check log file(s) for error details)
+    shell:
+        
+        /scratch/gpfs/bjarnold/Graham/cellranger/cellranger-8.0.1/cellranger count         --id ES-5161_NULL_OTH         --transcriptome /scratch/gpfs/bjarnold/Graham/genomes_10X/northern_elephant_seal         --create-bam true         --fastqs /scratch/gpfs/bjarnold/Graham/data_10X/cMaZuBaKFBP0Ygrh2ubrWr5mn7xa55w/20240821_ccc7_22G7Y5LT4_RQ25573_5p         --sample ES-5161_NULL_OTH         --localcores 10         
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    external_jobid: 58733986
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-09-04T170627.669925.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

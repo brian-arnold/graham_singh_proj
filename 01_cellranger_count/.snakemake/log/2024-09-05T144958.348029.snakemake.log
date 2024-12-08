@@ -1,0 +1,29 @@
+Building DAG of jobs...
+SLURM run ID: ee6b9ad6-9163-41e7-8cfe-4a7ed829b71f
+Using shell: /usr/bin/bash
+Provided remote nodes: 10
+Job stats:
+job                 count
+----------------  -------
+all                     1
+cellranger_count        1
+total                   2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep  5 14:49:58 2024]
+rule cellranger_count:
+    input: ES-5161_NULL_OTH.txt
+    output: ES-5161_NULL_OTH/ES-5161_NULL_OTH.mri.tgz
+    log: logs/cellranger_count/ES-5161_NULL_OTH.log
+    jobid: 1
+    reason: Missing output files: ES-5161_NULL_OTH/ES-5161_NULL_OTH.mri.tgz
+    wildcards: sample=ES-5161_NULL_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=1440, time=1440
+
+No SLURM account given, trying to guess.
+Guessed SLURM account: cs
+Job 1 has been submitted with SLURM jobid 58751146 (log: /scratch/gpfs/bjarnold/Graham/scripts/03_cellranger_count/.snakemake/slurm_logs/rule_cellranger_count/ES-5161_NULL_OTH/58751146.log).
+Terminating processes on user request, this might take some time.

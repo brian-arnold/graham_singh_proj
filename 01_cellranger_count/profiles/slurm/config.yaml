@@ -1,0 +1,14 @@
+executor: slurm
+use-conda: False
+jobs: 10 # Have up to N jobs submitted at any given time
+latency-wait: 100 # Wait N seconds for output files due to latency
+retries: 0 # Retry jobs N times.
+
+# These resources will be applied to all rules. Can be overriden on a per-rule basis below.
+default-resources:
+  mem_mb: 20000
+  runtime: 3000 # In minutes 
+  time: 3000 # In minutes
+
+set-threads:
+  cellranger_count: 20

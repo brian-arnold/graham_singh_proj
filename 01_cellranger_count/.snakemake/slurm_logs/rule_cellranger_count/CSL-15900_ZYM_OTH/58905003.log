@@ -1,0 +1,40 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Provided resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, time=1440
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep 12 19:34:12 2024]
+rule cellranger_count:
+    output: CSL-15900_ZYM_OTH_done.txt
+    log: logs/cellranger_count/CSL-15900_ZYM_OTH.log
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=CSL-15900_ZYM_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, runtime=1440, time=1440
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, time=1440
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep 12 19:34:13 2024]
+localrule cellranger_count:
+    output: CSL-15900_ZYM_OTH_done.txt
+    log: logs/cellranger_count/CSL-15900_ZYM_OTH.log
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=CSL-15900_ZYM_OTH
+    threads: 20
+    resources: mem_mb=40000, mem_mib=38147, disk_mb=1000, disk_mib=954, tmpdir=/tmp, runtime=1440, time=1440
+
+slurmstepd: error: *** JOB 58905003 ON della-r4c3n7 CANCELLED AT 2024-09-13T19:39:41 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 58905003.0 ON della-r4c3n7 CANCELLED AT 2024-09-13T19:39:41 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 47 seconds for job step to finish.
+Will exit after finishing currently running jobs (scheduler).
+Will exit after finishing currently running jobs (scheduler).

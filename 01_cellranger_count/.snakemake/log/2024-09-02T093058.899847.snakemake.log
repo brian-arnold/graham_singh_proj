@@ -1,0 +1,100 @@
+Building DAG of jobs...
+SLURM run ID: 3a53d92a-807d-4d11-ac61-f2640ab46b12
+Using shell: /usr/bin/bash
+Provided remote nodes: 10
+Job stats:
+job                   count
+------------------  -------
+all                       1
+cellranger_count          6
+create_sample_file        6
+total                    13
+
+Select jobs to execute...
+Execute 6 jobs...
+
+[Mon Sep  2 09:30:58 2024]
+localrule create_sample_file:
+    output: ES-5161_NULL_OTH.txt
+    jobid: 2
+    reason: Missing output files: ES-5161_NULL_OTH.txt
+    wildcards: sample=ES-5161_NULL_OTH
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=/tmp, time=0-20:00:00, slurm_account=cs
+
+
+[Mon Sep  2 09:30:58 2024]
+localrule create_sample_file:
+    output: HS-3088_NULL_OTH.txt
+    jobid: 12
+    reason: Missing output files: HS-3088_NULL_OTH.txt
+    wildcards: sample=HS-3088_NULL_OTH
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=/tmp, time=0-20:00:00, slurm_account=cs
+
+
+[Mon Sep  2 09:30:58 2024]
+localrule create_sample_file:
+    output: HS-3088_ZYM_OTH.txt
+    jobid: 4
+    reason: Missing output files: HS-3088_ZYM_OTH.txt
+    wildcards: sample=HS-3088_ZYM_OTH
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=/tmp, time=0-20:00:00, slurm_account=cs
+
+
+[Mon Sep  2 09:30:58 2024]
+localrule create_sample_file:
+    output: ES-5161_ZYM_OTH.txt
+    jobid: 6
+    reason: Missing output files: ES-5161_ZYM_OTH.txt
+    wildcards: sample=ES-5161_ZYM_OTH
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=/tmp, time=0-20:00:00, slurm_account=cs
+
+
+[Mon Sep  2 09:30:58 2024]
+localrule create_sample_file:
+    output: CSL-15900_NULL_OTH.txt
+    jobid: 8
+    reason: Missing output files: CSL-15900_NULL_OTH.txt
+    wildcards: sample=CSL-15900_NULL_OTH
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=/tmp, time=0-20:00:00, slurm_account=cs
+
+
+[Mon Sep  2 09:30:58 2024]
+localrule create_sample_file:
+    output: CSL-15900_ZYM_OTH.txt
+    jobid: 10
+    reason: Missing output files: CSL-15900_ZYM_OTH.txt
+    wildcards: sample=CSL-15900_ZYM_OTH
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=/tmp, time=0-20:00:00, slurm_account=cs
+
+[Mon Sep  2 09:30:58 2024]
+Finished job 2.
+1 of 13 steps (8%) done
+[Mon Sep  2 09:30:58 2024]
+Finished job 12.
+2 of 13 steps (15%) done
+[Mon Sep  2 09:30:58 2024]
+Finished job 4.
+3 of 13 steps (23%) done
+[Mon Sep  2 09:30:58 2024]
+Finished job 6.
+4 of 13 steps (31%) done
+[Mon Sep  2 09:30:58 2024]
+Finished job 8.
+5 of 13 steps (38%) done
+Select jobs to execute...
+Execute 5 jobs...
+
+[Mon Sep  2 09:30:59 2024]
+rule cellranger_count:
+    input: ES-5161_ZYM_OTH.txt
+    output: ES-5161_ZYM_OTH/ES-5161_ZYM_OTH.mri.tgz
+    jobid: 5
+    reason: Missing output files: ES-5161_ZYM_OTH/ES-5161_ZYM_OTH.mri.tgz; Input files updated by another job: ES-5161_ZYM_OTH.txt
+    wildcards: sample=ES-5161_ZYM_OTH
+    threads: 10
+    resources: mem_mb=10000, mem_mib=9537, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, time=0-20:00:00, slurm_account=cs
+
+No wall time information given. This might or might not work on your cluster. If not, specify the resource runtime in your rule or as a reasonable default via --default-resources.
+WorkflowError:
+SLURM job submission failed. The error message was sbatch: error: Batch job submission failed: Requested time limit is invalid (missing or exceeds some limit)
+
